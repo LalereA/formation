@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding:0;
+}
+html{
+    scroll-behavior: smooth;/*ajoute un effet au scroll vers les a */
+}
+/**** header **********************/
+header{
+    height: 100vh;/* 100 Viewport Height = toute la hauteur de l'écran*/
+    background: url("../img/montagne.jpg") center bottom fixed;
+    background-size: cover;
+}
+header nav{
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+}
+header nav ul{
+    height: 50px; /*hauteur de la UL*/
+    display: flex; /*permet aux enfants d'être les uns à côté des autres*/
+    justify-content: flex-end; /* répartition sur la largeur*/
+    align-items: center;/* repartition sur la hauteur*/
+    list-style: none;/*enlève les puces de la liste*/
+}
+header nav ul li{
+    margin : 0 20px;/*ajoute des marges a gauche et a droite de la li*/
+}
+header nav ul li a{
+    text-decoration:none; /*enlève le soulignement*/
+    color: white; /*change la couleur du texte*/
+    font-family: Arial, Helvetica, sans-serif; /* change la famille de typo*/
+    font-weight:bold;/*change la graisse de la typo*/
+    text-transform: uppercase;/* passe le texte en majuscule*/
+}
+header nav ul li a:hover{
+    border-bottom:2px solid black; /*ajoute une bordure en bas au survol*/
+    opacity:0.5; /* va créer une opacité au survol*/
+    color:black; /* change la couleur des textes au survol*/
+}
+header div{
+    height: calc(100vh - 50px);/* pour que la div occupe le reste de l'écran 
+    on retire les 50px de la hauteur de la nav au 100vh(hauteur complète de l'écran)*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/****************** Fin header **************************/
+/*style pour les deux sections **/
+section{
+    padding: 100px 0;/*ajoute du rembourrage (marge interne) à la section*/
+}
+section h2{
+    text-align: center;/*permet de centrer le titre*/
+    text-transform: capitalize;/* va mettre une majuscule à tous les titres*/
+}
+section>div{/* sélectionne les div de permier niveau*/
+    display: flex;/*permet aux div enfants de se mettre 
+    les unes à côté des autres*/
+    justify-content: center;/* permet de centrer les div enfant*/
+}
+section>div>div{/*sélectionne les div enfant des div de premier niveau*/
+    width: 150px;
+    height: 150px;
+    background: teal;
+    margin: 50px;/*éloigne les div les unes des aurtes*/
+    transition: width 0.5s cubic-bezier(.25,1.72,.51,-0.64) 1s;
+    /* proprièté durée effet délais */
+}
+section>div>div:hover{/*sélectionne les div enfant des div de premier niveau*/
+    background: mistyRose;
+    width: 190px;
+}
+/****** style section 2****/
+section:nth-of-type(2){
+    background:teal;
+    transition : 1s
+}
+section:nth-of-type(2):hover{
+    background:mistyRose;
+}
+section:nth-of-type(2)>div>div{
+    background:white;
+}
+/************* footer ************************/
+footer{
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+}
+footer p{
+    color: white;
+}
