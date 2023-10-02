@@ -72,6 +72,11 @@ header div{
 }
 header h1{
     font-family: 'Bran';
+    font-size: 40px;/*la taille de la font*/
+    line-height: 46px;/*la hauteur de ligne (interlignage)*/
     color: white;/* la couleur du txt*/
     text-align: center;/*l'alignement du txt*/
+}
+header h1::first-letter{
+    text-transform: uppercase;
 }
