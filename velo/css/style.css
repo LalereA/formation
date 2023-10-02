@@ -1,0 +1,77 @@
+*{
+    margin:0;
+    padding:0;
+}
+/***********************
+FONTS
+**************************/
+@font-face {
+    font-family: 'Bran';
+    src: url('../fonts/BrannbollFet.eot');
+    src: url('../fonts/BrannbollFet.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BrannbollFet.woff2') format('woff2'),
+        url('../fonts/BrannbollFet.woff') format('woff'),
+        url('../fonts/BrannbollFet.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fut';
+    src: url('../fonts/FuturaExtended.eot');
+    src: url('../fonts/FuturaExtended.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaExtended.woff2') format('woff2'),
+        url('../fonts/FuturaExtended.woff') format('woff'),
+        url('../fonts/FuturaExtended.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/****** *FIN FONTS *********/
+header{
+    height: 100vh;
+    background: url("../img/fond.jpg") bottom right;
+    background-size: cover;
+    display: flex;/*le contenu devient flexible*/
+    justify-content: center;/*répartition sur la largeur*/
+    align-items: center;/*répartition sur la hauteur*/
+}
+header nav{
+    position: fixed;/*bloque la navigation au scroll*/
+    top:50%;/*la position en hauteur de la nav*/
+    left:5%;/*la position en largeur de la nav*/
+}
+header nav ul{
+    list-style: none;/*sup les puces*/
+}
+header nav ul li{
+    padding: 10px 0;
+    text-shadow: 2px 2px 6px black;/* décalage sur X, décalage sur Y, le flou et la couleur*/
+}
+header nav ul li:nth-of-type(1){
+    border-bottom:3px solid white; /*épaisseur, style et couleur*/
+}
+header nav ul li a{
+    font-family: 'Fut';
+    text-decoration: none;/*sup le soulignement*/
+    text-transform: uppercase;/* txt en majuscule*/
+    color: white;/*couleur du txt*/
+    font-size: 30px;/*taille du txt*/
+    font-weight: bold;/*épaisseur du txt*/
+}
+header div{
+    width: 250px;/*largeur de la div*/
+    height: 250px;/*hauteur de la div*/
+    background: #333;/*fond de couleur*/
+    border-radius: 50%;/*permet d'arrondir les angles*/
+    display: flex;/*le contenu devient flexible*/
+    justify-content: center;/*répartition sur la largeur*/
+    align-items: center;/*répartition sur la hauteur*/
+}
+header h1{
+    font-family: 'Bran';
+    color: white;/* la couleur du txt*/
+    text-align: center;/*l'alignement du txt*/
+}
