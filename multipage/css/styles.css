@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/************************
+FONTS
+************************/
+@font-face {
+    font-family: 'DolceLight';
+    src: url('../fonts/DolceVitaLight.eot');
+    src: url('../fonts/DolceVitaLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DolceVitaLight.woff2') format('woff2'),
+        url('../fonts/DolceVitaLight.woff') format('woff'),
+        url('../fonts/DolceVitaLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neo';
+    src: url('../fonts/NEOTERIC-Bold.eot');
+    src: url('../fonts/NEOTERIC-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NEOTERIC-Bold.woff2') format('woff2'),
+        url('../fonts/NEOTERIC-Bold.woff') format('woff'),
+        url('../fonts/NEOTERIC-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dolce';
+    src: url('../fonts/DolceVita.eot');
+    src: url('../fonts/DolceVita.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DolceVita.woff2') format('woff2'),
+        url('../fonts/DolceVita.woff') format('woff'),
+        url('../fonts/DolceVita.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/*********FIn FoNTS *****/
+header{
+    height: 70px;/*hauteur du header*/
+    display: flex;/*permet à l'image et la nav d'être à côté*/
+    justify-content: space-between;/*les éléments se répartissent 
+    de droite à gauche et bord à bord du header*/
+}
+header img{
+    height: 50px;
+    margin: 10px;
+}
+header nav {
+    display: flex;
+    align-items: end;
+    margin-right: 10px;
+
+}
+header nav ul{
+    display: flex;
+    list-style: none;
+
+}
+header nav ul li{
+    display: flex;
+}
+header nav ul li a{
+    font-family: 'Neo';
+    text-transform: uppercase;
+    letter-spacing: 1px;/*va créer un espace entre les lettres interlettrage*/
+    color:black;
+    text-decoration: none;
+    transition: 0.5s;
+    height:30px;
+    display: block;
+    box-sizing: border-box;
+}
+header nav ul li a:hover, .ici{
+    border-bottom:8px solid ;
+}
+
+header nav ul li span{
+    margin :0 15px
+}
+main section{
+    height: calc(100vh - 70px);
+    background: url("../img/fond3.jpg") center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main section h1{
+    font-family: 'Dolce';
+    font-size: 100px;/*taille du titre*/
+    color: white;/*couleur du titre*/
+    text-align: center;/*centre le titre*/
+    font-weight: normal;/*enlève le bold qui est mis par défaut sur le h1*/
+}
+main section h1::first-line{
+    font-family: 'DolceLight';/*change la font de la première ligne*/
+}
+/********************************************************
+Les Pages
+********************************************************/
+section>div {/*cible la div de premier niveau*/
+    display: flex;/*permet de mettre les 3 div les unes à côté des autres*/
+}
+section>div div{
+    width: 150px;
+    height: 150px;
+    margin: 50px;
+    border: 2px solid white;
+}
+/*rotation*/
+#rot>div div:first-of-type{
+    transform: rotate(45deg);
+}
+#rot>div div:nth-of-type(2):hover{
+    transform: rotate(45deg);
+}
+#rot>div div:nth-of-type(3){
+    transition: 0.5s; /*ajoute l'effet sur la rotation*/
+}
+#rot>div div:nth-of-type(3):hover{/*au survol ça tourne*/
+    transform: rotate(45deg);/*rotation de 45degrès*/
+    
+}
+/*zoom*/
+#zoom>div div:first-of-type{
+    transform: scale(1.2);
+}
+#zoom>div div:nth-of-type(2):hover{
+    transform: scale(0.8);
+}
+#zoom>div div:nth-of-type(3){
+    transition: 0.5s; /*ajoute l'effet sur la rotation*/
+}
+#zoom>div div:nth-of-type(3):hover{/*au survol ça tourne*/
+    transform: scale(0.3);/*rotation de 45degrès*/
+    
+}
