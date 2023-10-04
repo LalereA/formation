@@ -5,6 +5,7 @@
 /************************
 FONTS
 ************************/
+/*Ne pas oublier de changer le chemin vers votre dossier fonts*/
 @font-face {
     font-family: 'DolceLight';
     src: url('../fonts/DolceVitaLight.eot');
@@ -50,48 +51,51 @@ header{
     de droite à gauche et bord à bord du header*/
 }
 header img{
-    height: 50px;
-    margin: 10px;
+    height: 50px;/*hauteur de l'image*/
+    margin: 10px;/*marge de 10px autour de l'image*/
 }
 header nav {
-    display: flex;
-    align-items: end;
-    margin-right: 10px;
+    display: flex; /* permet l'utilisation d'align-items*/
+    align-items: end;/*permet de mettre la UL en bas de la nav*/
+    margin-right: 10px;/* éloigner la nav de la droite de l'écran*/
 
 }
 header nav ul{
-    display: flex;
-    list-style: none;
+    display: flex;/* permet au LI d'être les unes à côté des autres*/
+    list-style: none;/* enlève les puces*/
 
 }
 header nav ul li{
-    display: flex;
+    display: flex;/* permet de mettre les A à côté des span*/
 }
 header nav ul li a{
-    font-family: 'Neo';
-    text-transform: uppercase;
+    font-family: 'Neo';/*modification de la font*/
+    text-transform: uppercase;/*mettre en majuscule la typo*/
     letter-spacing: 1px;/*va créer un espace entre les lettres interlettrage*/
-    color:black;
-    text-decoration: none;
-    transition: 0.5s;
-    height:30px;
-    display: block;
-    box-sizing: border-box;
+    color:black;/*mettre la couleur au texte*/
+    text-decoration: none;/*enlever le soulignement sur le A*/
+    transition: 0.5s;/*mets un effet sur l'animation de la bordure*/
+    height:30px; /* fixe la hauteur a 30px pour ne pas avoir de décalage quand la bordure s'affiche*/
+    display: block;/*obligatoire pour mettre une hauteur au A(élément inline par défaut)*/
+    box-sizing: border-box;/*force la bordure à être à l'intérieur de la hauteur du A*/
 }
 header nav ul li a:hover, .ici{
-    border-bottom:8px solid ;
+    border-bottom:8px solid ; /*affiche une bordure sous le A au survol 
+    et affiche une bordure sur l'élément qui a la classe*/
 }
 
 header nav ul li span{
-    margin :0 15px
+    margin :0 15px; /*ajoute une marge à gauche et à droite de chaque span*/
 }
 main section{
-    height: calc(100vh - 70px);
-    background: url("../img/fond3.jpg") center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: calc(100vh - 70px);/* on enlève la hauteur du header à la hauteur de l'écran 
+    pour que la section occupe le reste de l'espace*/
+    background: url("../img/fond3.jpg") center;/*ajoute l'image en fond de section*/
+    background-size: cover;/* oblige le fond à occuper l'intégralité de la section*/
+    display: flex;/*permet l'utilisation de justify-content et align-items*/
+    justify-content: center;/*va centrer le h1 + la div et le des autres section sur la largeur*/
+    align-items: center;/*va centrer le h1 + la div et le des autres section sur la hauteur*/
+    flex-direction: column;/*va permettre à la div parent et au a d'être l'un au dessus de l'autre*/
 }
 main section h1{
     font-family: 'Dolce';
@@ -110,36 +114,100 @@ section>div {/*cible la div de premier niveau*/
     display: flex;/*permet de mettre les 3 div les unes à côté des autres*/
 }
 section>div div{
-    width: 150px;
-    height: 150px;
-    margin: 50px;
-    border: 2px solid white;
+    width: 150px;/*largeur des 3 petites div*/
+    height: 150px;/*hauteur des 3 petites div*/
+    margin: 50px;/*éloigne les 3 div les unes des autres*/
+    border: 2px solid white;/*bordure blanche sur les 3 div*/
+}
+section a{
+    color: black;/* couleur du lien A*/
+    padding: 15px 30px; /*ajoute une marge interne de 15px en haut et en bas et 30px à gauche et à droite*/
+    background: white;/*fond de couleur*/
+    font-family: "Dolce";/*change la font*/
+    letter-spacing: 1px;/*espace les lettres*/
+    text-decoration: none;/*enlève le soulignement*/
+    transition:0.5s;/*va mettre un effet sur les changements du hover*/
+}
+section a:hover{
+    background: black;/* change la couleur de fond au survol*/
+    color:white;/* change la couleur du texte au survol*/
 }
 /*rotation*/
 #rot>div div:first-of-type{
-    transform: rotate(45deg);
+    transform: rotate(45deg);/*créer une rotation sur la première div des l'ouverture de la page*/
 }
 #rot>div div:nth-of-type(2):hover{
-    transform: rotate(45deg);
+    transform: rotate(45deg);/*créer une rotation sur la deuxième div au survol*/
 }
 #rot>div div:nth-of-type(3){
-    transition: 0.5s; /*ajoute l'effet sur la rotation*/
+    transition: 0.5s; /*ajoute l'effet sur la rotation de la troisieme div*/
 }
-#rot>div div:nth-of-type(3):hover{/*au survol ça tourne*/
-    transform: rotate(45deg);/*rotation de 45degrès*/
+#rot>div div:nth-of-type(3):hover{ /*au survol (hover) ça tourne*/
+    transform: rotate(45deg);/*créer une rotation sur la troisieme div au survol*/
     
 }
-/*zoom*/
+/*zoom*/ 
+/*de 0 à 1 = réduction, au dessus de 1 = agrandissement*/
 #zoom>div div:first-of-type{
-    transform: scale(1.2);
+    transform: scale(1.2); /*va augmenter la taille de la première div*/
 }
 #zoom>div div:nth-of-type(2):hover{
-    transform: scale(0.8);
+    transform: scale(0.8);/*va réduire la taille de la deuxième div*/
 }
 #zoom>div div:nth-of-type(3){
-    transition: 0.5s; /*ajoute l'effet sur la rotation*/
+    transition: 0.5s; /*ajoute l'effet sur la troisième div sur le changement de taille*/
 }
-#zoom>div div:nth-of-type(3):hover{/*au survol ça tourne*/
-    transform: scale(0.3);/*rotation de 45degrès*/
+#zoom>div div:nth-of-type(3):hover{/*au survol (hover) ça se réduit*/
+    transform: scale(0.3);/*va réduire la taille de la troisième div*/
+    
+}
+/*inclinaison*/
+#incli>div div:first-of-type{
+    transform: skewX(15deg);/*va incliner la première div sur l'axe des X (horizontalement)*/
+}
+#incli>div div:nth-of-type(2):hover{
+    transform: skewY(15deg); /*va incliner la première div sur l'axe des Y (verticalement)*/
+}
+#incli>div div:nth-of-type(3){
+    transition: 0.5s; /*ajoute l'effet sur l'inclinaison*/
+}
+#incli>div div:nth-of-type(3):hover{/*au survol (hover) ça s'incline*/
+    transform: skewX(15deg);/*va incliner la première div sur l'axe des X (horizontalement)*/
+    
+}
+/*déplacement*/
+#dep>div div:first-of-type{
+    transform: translate(10px, 15px);/*va déplacer la div de 10px sur l'axe des X et de 15px sur l'axe des Y*/
+}
+#dep>div div:nth-of-type(2):hover{
+    transform: translateY(15px);/*va déplacer la div de 15px sur l'axe des Y*/
+}
+#dep>div div:nth-of-type(3){
+    transition: 0.5s; /*ajoute l'effet sur le déplacement*/
+}
+#dep>div div:nth-of-type(3):hover{/*au survol (hover) ça se déplace*/
+    transform: translateX(15px);/*va déplacer la div de 15px sur l'axe des X*/
+    
+}
+/*origin*/
+#ori>div div:first-of-type{
+    transform-origin:top right;/*change le point d'origine de ma transformation. 
+    La rotation va se faire part rapport à l'angle haut droit*/
+    transform: rotate(45deg);/*créer une rotation sur la première div des l'ouverture de la page*/
+}
+#ori>div div:nth-of-type(2){
+    transform-origin:bottom left;/*change le point d'origine de ma transformation. 
+    La rotation va se faire part rapport à l'angle bas gauche*/
+}
+#ori>div div:nth-of-type(2):hover{
+    transform: rotate(45deg);/*créer une rotation sur la deuxième div*/
+}
+#ori>div div:nth-of-type(3){
+    transform-origin:bottom right;/*change le point d'origine de ma transformation. 
+    La rotation va se faire part rapport à l'angle bas droit*/
+    transition: 0.5s; /*ajoute l'effet sur le déplacement*/
+}
+#ori>div div:nth-of-type(3):hover{/*au survol (hover) ça se déplace*/
+    transform: rotate(45deg);/*créer une rotation sur la troisieme div*/
     
 }
