@@ -4,10 +4,10 @@
     font-weight: normal;
 }
 ul{
-    list-style: none;
+    list-style: none;/*enlève les puces sur toutes les UL*/
 }
 a{
-    text-decoration: none;
+    text-decoration: none;/*enlève le soulignement sur tous les A*/
 }
 /*********
 fonts
@@ -27,42 +27,45 @@ fonts
 
 /*fin fonts*/
 header{
-    height: 100vh;
+    height: 100vh;/*100vh = la hauteur complète de l'écran*/
     background: url("../img/fond.jpg") center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-size: cover;/*permet au background de couvrir complétement la taille du header*/
+    display: flex;/*permet l'utilisation de justify-content et align-items*/
+    justify-content: center;/*va centrer sur la largeur la div contenant les images du logo*/
+    align-items: center;/*va centrer sur la hauteur la div contenant les images du logo*/
 }
 header nav{
-    position: fixed;
-    top:50%;
-    left:5%;
-    background:rgba(255,255,255,0.7);
-    transform: translateY(-50%);
+    position: fixed;/* fixe la navigation par rapport à l'écran*/
+    top:50%;/*la navigation sera positionnée à 50% du haut de l'écran*/
+    left:5%;/*la navigation sera positionnée à 5% de la gauche de l'écran*/
+    background:rgba(255,255,255,0.7);/*couleur du fond avec une transparence*/
+    transform: translateY(-50%);/*permet de centrer parfaitement la nav sur la hauteur en la remontant de 50% de sa taille*/
 }
 header nav ul li{
-    padding: 10px 20px;
-    border-bottom: 2px solid black;
+    padding: 10px 20px; /* ajoute une marge interne de 10px en haut et en bas et de 20px à gauche et à droite*/
+    border-bottom: 2px solid black;/*ajoute une bordure en bas de chaque LI*/
 }
 header nav ul li:last-of-type{
-    border-bottom: none;
+    border-bottom: none;/*retire la bordure sur la dernière LI*/
 }
 header nav ul li a{
-    font-family: 'big';
-    font-size: 20px;
-    color:black;
-    text-transform: uppercase;
+    font-family: 'big';/*change la font du A*/
+    font-size: 20px;/* change la taille du texte*/
+    color:black;/*couleur du texte*/
+    text-transform: uppercase;/*va mettre le texte en majuscule*/
 }
 
 header div {
-    width: 20vw;
-    height: 20vw;
-    position: relative;
+    width: 20vw;/*largeur de la div contenant les images du logo en vw(ViewportWidth)
+    valeur relative à la largeur de l'écran*/
+    height: 20vw;/*hauteur de la div contenant les images du logo en vw(ViewportWidth)
+    valeur relative à la largeur de l'écran*/
+    position: relative;/*permet au image en position absolute de dépendre de leur parant*/
 }
 header div img{
-    width: 100%;
-    position: absolute;
-    top:0;
-    left: 0;
+    width: 100%;/*largeur des imgages (100% de la largeur du parent div*/
+    position: absolute;/*permet de superposer les images les unes au dessus des autres
+    par rapport à leur parent en relative*/
+    top:0;/*elles seront à 0px du haut de la div parent*/
+    left: 0;/*elles seront à 0px de la gauche de la div parent*/
 }
