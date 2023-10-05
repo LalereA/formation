@@ -9,7 +9,7 @@ a{
     text-decoration: none;/*enlève le soulignement sur tous les A*/
 }
 body{
-    background: teal;/*fond de couleur */
+    background: #333;/*fond de couleur */
     display: flex;/*permet l'utilisation de justify-content et d'align-items*/
     justify-content: center;/*permet de centrer la section sur la largeur*/
     align-items: center;/*permet de centrer la section sur la hauteur*/
@@ -20,13 +20,51 @@ section{
     width: 600px;/* largeur de la section*/
     height: 600px;/* hauteur de la section*/
     background: white;/* couleur de la section*/
-    display: flex;
-    flex-wrap: wrap;
+    display: flex;/*permet au div d'être les unes à côté des autres*/
+    flex-wrap: wrap;/*permet au div de passer à la ligne*/
 }
 section>div{
-    width: 200px;/* largeur de la section*/
-    height: 200px;/* hauteur de la section*/
+    width: 200px;/* largeur de la div*/
+    height: 200px;/* hauteur de la div*/
+    position: relative;/*permet au image en position absolute de dépendre de ce parent*/
+    overflow: hidden;/*masque les éléments qui dépassent/qui sortent de la div*/
 }
 section img{
-    width: 100%;/* largeur de la section*/
+    position: absolute;/*permet de superposer l'image au dessus de la nav
+    par rapport au parent en relative*/
+    top:0;/*elles seront à 0px du haut de la div parent*/
+    left: 0;/*elles seront à 0px de la gauche de la div parent*/
+    width: 100%;/*l'image va faire 100% de son parent*/
+    transition: 0.5s;/*ajoute un effet lors du déplacement de l'image*/
+}
+section div nav{
+    width: 200px;/* largeur de la nav*/
+    height: 200px;/* hauteur de la nav*/
+    display: flex;/*permet l'utilisation de justify-content et align-items*/
+    justify-content: center;/*va centrer la UL sur la largeur*/
+    align-items: center;/*va centrer la UL sur la hauteur*/
+}
+section div nav ul li{
+    padding:5px 0; /*ajoute une marge interne de 5px en haut et en bas des LI*/
+}
+section div nav ul li a{
+    font-family: Arial, Helvetica, sans-serif;/*change la font*/
+    color:black;/*change la couleur du texte*/
+    text-transform: uppercase;/*va mettre le texte en majuscuke*/
+}
+section div nav ul li a:hover{/*hover = survol*/
+    opacity:0.7;/*va mettre une opacité sur les A au survol*/
+}
+/* les animations*/
+.haut:hover img{/*au survol de la div class="haut" on cible l'enfant img*/
+    transform: translateY(90%);/*l'image va se déplacer sur l'axe X(horizontal)*/
+}
+.bas:hover img{/*au survol de la div class="haut" on cible l'enfant img*/
+    transform: translateY(-90%);/*l'image va se déplacer sur l'axe Y(vertical)*/
+}
+.gauche:hover img{/*au survol de la div class="haut" on cible l'enfant img*/
+    transform: translateX(-90%);/*l'image va se déplacer sur l'axe X(horizontal)*/
+}
+.droite:hover img{/*au survol de la div class="haut" on cible l'enfant img*/
+    transform: translateY(90%);/*l'image va se déplacer sur l'axe Y(vertical)*/
 }

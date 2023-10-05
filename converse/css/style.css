@@ -60,7 +60,7 @@ header div {
     valeur relative à la largeur de l'écran*/
     height: 20vw;/*hauteur de la div contenant les images du logo en vw(ViewportWidth)
     valeur relative à la largeur de l'écran*/
-    position: relative;/*permet au image en position absolute de dépendre de leur parant*/
+    position: relative;/*permet au image en position absolute de dépendre de leur parent*/
 }
 header div img{
     width: 100%;/*largeur des imgages (100% de la largeur du parent div*/
