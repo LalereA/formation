@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/*********
+fonts
+*********/
+@font-face {
+    font-family: 'big';
+    src: url('../fonts/BigNoodleTitling.eot');
+    src: url('../fonts/BigNoodleTitling.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BigNoodleTitling.woff2') format('woff2'),
+        url('../fonts/BigNoodleTitling.woff') format('woff'),
+        url('../fonts/BigNoodleTitling.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/*fin fonts*/
+header{
+    height: 100vh;
+    background: url("../img/fond.jpg") center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav{
+    position: fixed;
+    top:50%;
+    left:5%;
+    background:rgba(255,255,255,0.7);
+    transform: translateY(-50%);
+}
+header nav ul li{
+    padding: 10px 20px;
+    border-bottom: 2px solid black;
+}
+header nav ul li:last-of-type{
+    border-bottom: none;
+}
+header nav ul li a{
+    font-family: 'big';
+    font-size: 20px;
+    color:black;
+    text-transform: uppercase;
+}
+
+header div {
+    width: 20vw;
+    height: 20vw;
+    position: relative;
+}
+header div img{
+    width: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+}

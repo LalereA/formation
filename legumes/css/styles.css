@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;/*enlève les puces sur toutes les UL*/
+}
+a{
+    text-decoration: none;/*enlève le soulignement sur tous les A*/
+}
+body{
+    background: teal;/*fond de couleur */
+    display: flex;/*permet l'utilisation de justify-content et d'align-items*/
+    justify-content: center;/*permet de centrer la section sur la largeur*/
+    align-items: center;/*permet de centrer la section sur la hauteur*/
+    height: 100vh;/*on est obliger de donner une hauteur au body pour que le navigateur 
+    sache sur quel hauteur il doit centrer la section*/
+}
+section{
+    width: 600px;/* largeur de la section*/
+    height: 600px;/* hauteur de la section*/
+    background: white;/* couleur de la section*/
+    display: flex;
+    flex-wrap: wrap;
+}
+section>div{
+    width: 200px;/* largeur de la section*/
+    height: 200px;/* hauteur de la section*/
+}
+section img{
+    width: 100%;/* largeur de la section*/
+}
