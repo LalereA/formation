@@ -84,94 +84,95 @@ header div img{
 /* FIN Header*/
 /* Section produits*/
 main{
-    display: flex;
-    justify-content: flex-end;
+    display: flex;/*permet l'utilisation de justify-content*/
+    justify-content: flex-end;/*pousse la section sur la droite*/
 }
 section{
-    width: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 100px 0;
+    width: 70%;/*la taille de la section*/
+    display: flex;/*permet au div de venir les unes à côté des autres*/
+    flex-wrap: wrap;/*permet au div de passer à la ligne*/
+    padding: 100px 0;/*ajoute une marge interne en haut et en bas de 100px*/
 }
 section>div{/*la div produit (animation + nom du produit)*/
-    width: 200px;
-    margin: 25px;
+    width: 200px;/*largeur de la div*/
+    margin: 25px;/* marge entre les div*/
 }
 section h2{
-    font-family: 'big';
+    font-family: 'big';/* change la font du h2*/
 }
 section>div>div{/*la div qui contient la photo + l'animation*/
-    width:200px ;
-    height: 200px;
-    position: relative;
-    overflow: hidden;
+    width:200px ;/*largeur de la div*/
+    height: 200px;/*hauteur de la div*/
+    position: relative;/*permet à la div qui contient le p d'en dépendre avec le absolute*/
+    overflow: hidden;/* masque les éléments qui dépassent des 200x200px*/
 }
 section>div>div img{
-    width: 100%;
+    width: 100%;/*l'image fait 100% de la largeur du parent*/
 }
 section>div>div>div{/*la div qui s'anime*/
-    font-family: 'big';
+    font-family: 'big';/* change la font du p*/
     background: rgba(0,0,0,0.5);
-    width: 200px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: absolute;
-    top:0;
-    left:0;
-    transition: 0.5s
+    width:200px ;/*largeur de la div*/
+    height: 200px;/*hauteur de la div*/
+    display: flex;/* permet l'utilisation de justify-content et align-items pour centrer le p*/
+    justify-content: center;/*centre sur la largeur*/
+    align-items: center;/*centre sur la hauteur*/
+    text-align: center;/* centre les lignes du texte*/
+    position: absolute;/*permet la superposition avec le parent en relative*/
+    top:0;/*elle sera à 0px du haut de la div parent*/
+    left:0;/*elle sera à 0px de la gauche de la div parent*/
+    transition: 0.5s /*ajoute un effet sur l'animation*/
     
 }
+/*100% = la taille de l'élément*/
 .haut>div{/*la div qui s'anime à l'intérieur de la class haut*/
-    transform: translateY(-100%);/*100% = la taille de l'élément*/
+    transform: translateY(-100%);/*déplace la div à -100% de sa taille = vers la haut ->axe Y*/
 }
 .haut:hover>div{/*au survol de class haut la div revient à son point 0*/
-    transform: translateY(0);
+    transform: translateY(0);/*elle revient à son point de départ*/
 }
 .droite>div{/*la div qui s'anime à l'intérieur de la class droite*/
-    transform: translateX(100%);/*100% = la taille de l'élément*/
+    transform: translateX(100%);/*déplace la div à 100% de sa taille = vers la droite ->axe X*/
 }
 .droite:hover>div{/*au survol de class droite la div revient à son point 0*/
-    transform: translateX(0);
+    transform: translateX(0);/*elle revient à son point de départ*/
 }
 .bas>div{/*la div qui s'anime à l'intérieur de la class haut*/
-    transform: translateY(100%);/*100% = la taille de l'élément*/
+    transform: translateY(100%);/*déplace la div à 100% de sa taille = vers le bas ->axe Y*/
 }
 .bas:hover>div{/*au survol de class haut la div revient à son point 0*/
-    transform: translateY(0);
+    transform: translateY(0);/*elle revient à son point de départ*/
 }
 .gauche>div{/*la div qui s'anime à l'intérieur de la class droite*/
-    transform: translateX(-100%);/*100% = la taille de l'élément*/
+    transform: translateX(-100%);/*déplace la div à -100% de sa taille = vers la gauche ->axe X*/
 }
 .gauche:hover>div{/*au survol de class droite la div revient à son point 0*/
-    transform: translateX(0);
+    transform: translateX(0);/*elle revient à son point de départ*/
 }
 
 /* FIN Section produits*/
 /* footer*/
 footer{
-    background: #333;
+    background: #333;/*ajoute un fond de couleur au footer*/
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 150px 0;
+    align-items: center;/* permet de centrer sur la largeur les éléments enfant*/
+    flex-direction: column;/*permet de remettre les éléments le uns en dessous des autres*/
+    padding: 150px 0;/* ajoute une marge interne en haut et en bas du footer*/
 }
 .coordonnees{
     display: flex;/*permet a bloc-g et bloc-d d'être à côté*/
     margin-bottom: 50px;/*pousse la div reseau vers le bas*/
 }
 .bloc-g{
-    border-right: 2px solid white;
-    padding-right: 25px;/*ajoute une marge interne à droite*/
+    border-right: 2px solid white;/*ajoute une bordure à droite de la div*/
+    padding-right: 25px;/*ajoute une marge interne à droite pour éloigner la bordure*/
 }
 .bloc-d{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding-left: 25px;
-    color: white;
+    flex-direction: column;/*permet de remettre les éléments le uns en dessous des autres*/
+    justify-content: flex-end;/*mets les éléments en bas de la div*/
+    padding-left: 25px;/* ajoute une marge interne de 25px à gauche*/
+    color: white;/*change la couleur des textes*/
 
 }
 .reseaux a{
